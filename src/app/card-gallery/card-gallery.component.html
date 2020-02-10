@@ -1,0 +1,10 @@
+<div class="gallery">
+  <h1>Our beautiful shots</h1>
+  <div class="cards">
+    <app-card
+      *ngFor="let card of cards | async"
+      [cardData]="card"
+      (liked)="handleLiked(card.id)"
+    ></app-card>
+  </div>
+</div>

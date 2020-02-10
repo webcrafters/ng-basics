@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="image" [ngStyle]="{'backgroundImage': 'url('+cardData.url+')'}"></div>
+  <div class="description">
+    {{cardData.name}}
+  </div>
+  <div class="likes">
+    <i class="material-icons likes-star" (click)="liked.emit()">star_border</i>
+    <span class="no_of_likes" >{{cardData.likes}}</span>
+  </div>
+</div>

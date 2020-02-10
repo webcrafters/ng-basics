@@ -1,0 +1,20 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: #dededf;
+  padding: 24px;
+  min-height: 70vh;
+}
+
+.cards {
+  margin-top: 36px;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

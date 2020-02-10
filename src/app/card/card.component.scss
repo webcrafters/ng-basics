@@ -1,0 +1,47 @@
+.card {
+  box-shadow: 3px 3px 12px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  width: 240px;
+  padding: 6px;
+  margin: 12px;
+  background-color: #ffffff;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  background-image: url('https://innerharbouroptometry.com/wp-content/uploads/2016/05/photo-1438761681033-6461ffad8d80-1030x687.jpe');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-extra {
+  width: 100%;
+  height: 200px;
+}
+.image-extra img {
+  width: 150%;
+  overflow: hidden;
+}
+
+.description {
+  text-align: center;
+  margin: 6px;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.likes i:hover {
+  cursor: pointer;
+}
+
+.likes .no_of_likes {
+  position: relative;
+  top: 1px;
+  font-size: 14px;
+}

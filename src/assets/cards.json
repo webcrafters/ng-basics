@@ -1,0 +1,29 @@
+{
+  "cards": [
+    {
+      "id": "xyz1",
+      "name": "Pretty shot",
+      "url": "https://picsum.photos/400/300",
+      "likes": 2
+    },
+    {
+      "id": "xyz2",
+      "name": "Oh look at that!",
+      "url": "https://picsum.photos/500/400",
+      "likes": 3
+    },
+    {
+      "id": "xyz3",
+      "name": "Who am I?",
+      "url":
+        "https://picsum.photos/700/600",
+      "likes": 4
+    },
+    {
+      "id": "xyz4",
+      "name": "Freedom!",
+      "url": "https://picsum.photos/600/500",
+      "likes": 12
+    }
+  ]
+}
