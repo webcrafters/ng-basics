@@ -34,10 +34,15 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  user-select: none;
 }
 
 .likes i:hover {
   cursor: pointer;
+}
+
+.likes i.disabled {
+  pointer-events: none;
 }
 
 .likes .no_of_likes {

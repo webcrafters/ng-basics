@@ -17,6 +17,6 @@ export class CardGalleryComponent implements OnInit {
   }
 
   handleLiked(id: string) {
-    // this.cards.find(card => card.id === id).likes++;
+    this.cardSvc.likedCard(id);
   }
 }

@@ -10,6 +10,10 @@ export class CardComponent implements OnInit {
   @Input() cardData: CardModel;
   @Output() liked = new EventEmitter<any>();
 
+  get rightIcon(): string {
+    return this.cardData.likedByMe ? 'star' : 'star_border';
+  }
+
   constructor() { }
 
   ngOnInit() {

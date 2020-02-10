@@ -4,7 +4,8 @@
       "id": "xyz1",
       "name": "Pretty shot",
       "url": "https://picsum.photos/400/300",
-      "likes": 2
+      "likes": 2,
+      "likedByMe": true
     },
     {
       "id": "xyz2",

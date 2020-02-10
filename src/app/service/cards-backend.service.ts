@@ -20,4 +20,8 @@ export class CardsBackendService {
       map((response => response.cards))
     );
   }
+
+  updateCard(card: CardModel): Observable<boolean> {
+    return of(true); // predent it was successful
+  }
 }
