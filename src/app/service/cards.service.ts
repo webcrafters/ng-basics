@@ -28,17 +28,45 @@ export class CardsService {
   }
 
   public likedCard(id: string) {
-    // optimistic update
     const affectedCard = this.cards.find(card => card.id === id);
-    affectedCard.likes++;
-    affectedCard.likedByMe = true;
+    if (affectedCard.likedByMe) {
+      this.tryRemoveLike(affectedCard);
+    } else {
+      this.tryApplyLike(affectedCard);
+    }
+  }
+
+  private tryApplyLike(card: CardModel) {
+    // optimistic update
+    this._likeLocally(card);
     // ensure backend consistency
-    this.cardsBackendSvc.updateCard(affectedCard).subscribe((successful: boolean) => {
+    this.cardsBackendSvc.updateCard(card).subscribe((successful: boolean) => {
       if (!successful) {
-        affectedCard.likes--;
-        affectedCard.likedByMe = false;
+        this._unlikeLocally(card);
         // show user error notification
       }
     });
+  }
+
+  private tryRemoveLike(card: CardModel) {
+    // optimistic update
+    this._unlikeLocally(card);
+    // ensure backend consistency
+    this.cardsBackendSvc.updateCard(card).subscribe((successful: boolean) => {
+      if (!successful) {
+        this._likeLocally(card);
+        // show user error notification
+      }
+    });
+  }
+
+  private _likeLocally(card: CardModel) {
+    card.likes++;
+    card.likedByMe = true;
+  }
+
+  private _unlikeLocally(card: CardModel) {
+    card.likes--;
+    card.likedByMe = false;
   }
 }

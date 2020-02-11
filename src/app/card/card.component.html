@@ -5,7 +5,6 @@
   </div>
   <div class="likes">
     <i class="material-icons likes-star"
-      [ngClass]="{'disabled': cardData.likedByMe }"
       (click)="liked.emit()"
       >{{rightIcon}}</i>
     <span class="no_of_likes" >{{cardData.likes}}</span>
